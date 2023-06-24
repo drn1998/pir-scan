@@ -1,0 +1,8 @@
+#ifndef PIR_SCAN_LIMITS
+#define PIR_SCAN_LIMITS
+
+#define MAX_WORD_LENGTH 64
+
+#define DEFAULT_WORD_COUNT_PER_SENTENCE 8
+
+#endif
