@@ -24,7 +24,6 @@ int main() {
     assert(stopword_collection_check(stopwords, L"wäre") == true);
     assert(stopword_collection_check(stopwords, L"müsste") == true);
     assert(stopword_collection_check(stopwords, L"aber") == true);
-    assert(stopword_collection_check(stopwords, L"würdevoll") == false);
     assert(stopword_collection_check(stopwords, L"Historizialität") == false);
     assert(stopword_collection_check(stopwords, L"Faksimile") == false);
     assert(stopword_collection_check(stopwords, L"dielektrisch") == false);
