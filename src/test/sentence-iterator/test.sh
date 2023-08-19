@@ -6,6 +6,6 @@ script_file=$(basename "$0")
 for file in $c_files; do
   if [ "$file" != "$script_file" ]; then
     echo "Running test for $file"
-    gcc "$file" ../../sentence-break.c ../../string-utilities.c -g -O3 -fanalyzer && valgrind -q ./a.out && rm a.out
+    gcc "$file" ../../sentence-iterator.c ../../sentence-break.c ../../circular-buffer.c ../../string-utilities.c -g -O3 -fanalyzer && valgrind -q ./a.out && rm a.out
   fi
 done

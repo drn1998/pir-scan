@@ -46,7 +46,7 @@ int main() {
         if(current_sentence == NULL) break;
 
         corpus_write_sentence(&corpus, current_sentence);
-        wprintf(L"%ls", current_sentence->word_v[0]);
+        //wprintf(L"%ls", current_sentence->word_v[0]);
         sentence_free(current_sentence);
     } while(1);
 

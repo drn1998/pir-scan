@@ -10,6 +10,7 @@ int main() {
     SentenceContextHandle * handle;
     Sentence * current_sentence = NULL;
     FILE * fp_text;
+    size_t count = 0;
 
     setlocale(LC_ALL, "");
 
@@ -30,11 +31,14 @@ int main() {
         current_sentence = sentence_iterator_sentence_next(handle);
         if(current_sentence == NULL) break;
 
+        wprintf(L"(%llu) ", count + 1);
+
         for(register size_t i = 0; i < current_sentence->word_n; i++) {
             wprintf(L"%ls ", current_sentence->word_v[i]);
         }
 
         wprintf(L"\n");
+        count++;
         sentence_free(current_sentence);
     } while(1);
 
